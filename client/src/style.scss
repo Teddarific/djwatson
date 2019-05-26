@@ -1,0 +1,22 @@
+body, html {
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+}
+
+.all-container {
+  height: 100%;
+}
+
+.landing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+}
