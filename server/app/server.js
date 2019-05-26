@@ -1,11 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import path from 'path';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-import exampleRoutes from './routes/exampleRoutes';
+import uriRoutes from './routes/uriRoutes';
 
 // initialize
 dotenv.config();
@@ -24,36 +23,35 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-//hook up MongDB
+// hook up MongDB
 let uri;
 
-if ( !process.env.DB_USERNAME || !process.env.PASSWORD ){
+if (!process.env.DB_USERNAME || !process.env.PASSWORD) {
   // local development
   uri = 'mongodb://localhost/testdev';
-}
-else {
+} else {
   // hook up to actual database
 }
 
-let db = mongoose.connect(uri, {
+const db = mongoose.connect(uri, {
   useMongoClient: true,
 });
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
-  console.log("MongoDB connection successful to " + uri);
+  console.log(`MongoDB connection successful to ${uri}`);
 });
 
 // default index route
 app.get('/', (req, res) => {
-  res.send('Default Route');
+  res.send('DJ Watson API: Live currently.');
 });
 
 // register our routes
-exampleRoutes(app);
+uriRoutes(app);
 
 // START THE SERVER
 // =============================================================================
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 9090;
 app.listen(port);
 console.log(`Server listening on port ${port}`);
