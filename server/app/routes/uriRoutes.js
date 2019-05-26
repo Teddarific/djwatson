@@ -1,7 +1,7 @@
 import * as uriController from '../controllers/uriController';
 
 module.exports = (app) => {
-  app.route('/getSongs')
+  app.route('/songs')
     .get(uriController.getSongs);
 
   app.route('/dj')

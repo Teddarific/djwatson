@@ -9,13 +9,29 @@ const features = ['key', 'mode', 'time_signature', 'acousticness', 'danceability
   'energy', 'instrumentalness', 'liveness', 'loudness', 'speechiness',
   'valence', 'tempo'];
 
-const formatFeature = (audioFeature) => {
-  const clean = {};
-
-  features.forEach((f) => {
-    clean[f] = audioFeature[f];
-  });
+const attachNames = (sp, tracks, res) => {
+  const reqEndpoint = `https://api.spotify.com/v1/tracks/?ids=${tracks.join(',')}`;
+  sp.request(reqEndpoint)
+    .then((data) => {
+      const results = [];
+      data.tracks.forEach((v) => {
+        results.push({
+          id: v.id,
+          name: v.name,
+          artist: v.artists[0].name,
+        });
+      });
+      res.status(200).json(results);
+    });
 };
+
+// const formatFeature = (audioFeature) => {
+//   const clean = {};
+//
+//   features.forEach((f) => {
+//     clean[f] = audioFeature[f];
+//   });
+// };
 
 const vectorizeFeatures = (af1, af2) => {
   const featureName = 'FEATURE ';
@@ -109,17 +125,16 @@ export const getSongs = (req, res) => {
   sp.request(reqEndpoint)
     .then((data) => {
       const ids = data.tracks.items.map((v) => { return v.track.id; });
-      res.status(200).send(ids);
+      attachNames(sp, ids, res);
     })
     .catch((err) => {
-      console.log(err);
+      // console.log(err);
       res.status(400);
     });
 };
 
 export const dj = (req, res) => {
-  let { tracks } = req.body;
-  tracks = JSON.parse(tracks);
+  const { tracks } = req.body;
 
   const sp = new Spotify({
     id: process.env.SPOTIFY_CLIENT_ID,
@@ -131,10 +146,10 @@ export const dj = (req, res) => {
     .then((data) => {
       // Clean the data
       const results = orderCalculation(tracks, data.audio_features);
-      res.status(200).json(results);
+      attachNames(sp, results, res);
     })
     .catch((err) => {
-      console.log(err);
+      // console.log(err);
       res.status(400);
     });
 };

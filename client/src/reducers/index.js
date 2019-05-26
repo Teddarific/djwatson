@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import uriReducer from './uriReducer';
 
 const rootReducer = combineReducers({
-  uri: uriReducer,
+  data: uriReducer,
 });
 
 export default rootReducer;
