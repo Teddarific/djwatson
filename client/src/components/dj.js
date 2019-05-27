@@ -48,11 +48,9 @@ class DJ extends Component {
 
     return (
       <div className="dj-container">
-        <Fade top duration={500}>
-          <div className="dj-title gradient" onClick={this.goHome} role="button" tabIndex={0}>
+        <div className="dj-title gradient" onClick={this.goHome} role="button" tabIndex={0}>
           DJ WATSON
-          </div>
-        </Fade>
+        </div>
         <div className="dj-songs">
           <div className="dj-list">
             <Fade bottom duration={500}>

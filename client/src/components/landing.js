@@ -33,9 +33,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing-container">
-        <Fade duration={800}>
-          <div className="landing-title gradient"> DJ WATSON </div>
-        </Fade>
+        <div className="landing-title gradient"> DJ WATSON </div>
         {
         // <div className="landing-subtitle">
         //   {'Enter your Spotify Playlist\'s URI to get started.'}
