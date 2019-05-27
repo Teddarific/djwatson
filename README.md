@@ -86,6 +86,6 @@ Take the .csv and convert it to a JSON using <http://www.convertcsv.com/csv-to-j
 
 From the `train` directory, run `python -m SimpleHTTPServer 9000`. Visit <http://localhost:9000> on Chrome and inspect the page using Chrome Dev Tools. 
 
-Wait for the net to change. It will output a JSON string in the console. Copy and paste this in `server/app/trainedNet.json`. 
+Wait for the net to train. It will output a JSON string in the console when it's done. Copy and paste this in `server/app/trainedNet.json`. 
 
 Congrats, you've successfully retrained your model.
