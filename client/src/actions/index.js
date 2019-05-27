@@ -6,6 +6,7 @@ export const ActionTypes = {
   SET_URI: 'SET_URI',
   GET_SONGS: 'GET_SONGS',
   GET_ORDERED: 'GET_ORDERED',
+  CLEAR_DATA: 'CLEAR_DATA',
 };
 
 
@@ -44,5 +45,12 @@ export function getSongs(uri) {
       .catch((error) => {
         console.log(error);
       });
+  };
+}
+
+export function clearData() {
+  return {
+    type: ActionTypes.CLEAR_DATA,
+    payload: {},
   };
 }

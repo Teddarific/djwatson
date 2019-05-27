@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 import { setURI } from '../actions/index';
 
@@ -32,14 +33,18 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing-container">
-        <div className="landing-title gradient"> DJ WATSON </div>
+        <Fade duration={800}>
+          <div className="landing-title gradient"> DJ WATSON </div>
+        </Fade>
         {
         // <div className="landing-subtitle">
         //   {'Enter your Spotify Playlist\'s URI to get started.'}
         // </div>
         }
-        <input className="landing-input" placeholder="Spotify Playlist URI" onChange={this.handleChange} type="text" value={this.state.uri} />
-        <button className="landing-button" onClick={this.submitURI}> Mix </button>
+        <Fade duration={3000}>
+          <input className="landing-input" placeholder="Spotify Playlist URI" onChange={this.handleChange} type="text" value={this.state.uri} />
+          <button className="landing-button" onClick={this.submitURI}> MIX </button>
+        </Fade>
       </div>
     );
   }
