@@ -83,6 +83,12 @@ const orderCalculation = (tracks, audioFeatures) => {
   const result = [];
   let tracksLeft = [...tracks];
 
+  // Shuffle tracks
+  for (let i = tracksLeft.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [tracksLeft[i], tracksLeft[j]] = [tracksLeft[j], tracksLeft[i]];
+  }
+
   tracksLeft = tracksLeft.filter((value) => {
     return value !== maxPair[0] && value !== maxPair[1];
   });
