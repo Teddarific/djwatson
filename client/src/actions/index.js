@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-const ROOT_URL = 'http://localhost:9090';
+// see what url we are on, if localhost, use localhost root url
+const currentURL = window.location.hostname;
+let ROOT_URL = 'https://dj-watson.herokuapp.com';
+
+if (currentURL.indexOf('localhost') >= 0) {
+  ROOT_URL = 'http://localhost:9090';
+  // ROOT_URL = 'https://left-on-read.herokuapp.com/api';
+}
 
 export const ActionTypes = {
   SET_URI: 'SET_URI',
