@@ -20,9 +20,41 @@ class DJ extends Component {
     this.props.getSongs(testURI);
   }
 
+  renderTracks = (tracks) => {
+    return tracks.map((song) => {
+      return (
+        <div className="song">
+          <div className="song-title"> {song.name} </div>
+          <div className="song-artist"> {song.artist} </div>
+        </div>
+      );
+    });
+  }
+
   render() {
+    const listLoading = (
+      <div>
+        List is loading...
+      </div>
+    );
+
+    const songsElement = this.props.data.songs ? this.renderTracks(this.props.data.songs) : listLoading;
+    const orderedElement = this.props.data.ordered ? this.renderTracks(this.props.data.ordered) : listLoading;
+
     return (
-      <div> Whattdup </div>
+      <div className="dj-container">
+        <div className="dj-title gradient">
+          DJ WATSON
+        </div>
+        <div className="dj-songs">
+          <div className="dj-song-list">
+            {songsElement}
+          </div>
+          <div className="dj-song-list">
+            {orderedElement}
+          </div>
+        </div>
+      </div>
     );
   }
 }

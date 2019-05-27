@@ -32,12 +32,14 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing-container">
-        <div className="landing-title"> DJ WATSON </div>
-        <div className="landing-subtitle">
-          {'The internet\'s first and only AI driven DJ'}
-        </div>
-        <input className="landing-input" onChange={this.handleChange} type="text" value={this.state.uri} />
-        <button className="landing-button" onClick={this.submitURI}> D J ! </button>
+        <div className="landing-title gradient"> DJ WATSON </div>
+        {
+        // <div className="landing-subtitle">
+        //   {'Enter your Spotify Playlist\'s URI to get started.'}
+        // </div>
+        }
+        <input className="landing-input" placeholder="Spotify Playlist URI" onChange={this.handleChange} type="text" value={this.state.uri} />
+        <button className="landing-button" onClick={this.submitURI}> Mix </button>
       </div>
     );
   }
