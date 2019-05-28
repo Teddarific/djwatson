@@ -16,6 +16,13 @@ DJ WATSON is a paid service and/or feature of a preexisting paid service (such a
 
 #### Knowledge Source
 
+**Positive data**
+
+albums
+
+**Negative data**
+
+generator
 
 
 #### Tools and Techniques
@@ -26,6 +33,8 @@ DJ WATSON is a paid service and/or feature of a preexisting paid service (such a
 
 
 #### Difficulties Encountered
+
+bias, getting all types of music in, how you know it works- what songs sound good and don't
 
 
 #### Analysis of Results
