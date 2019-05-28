@@ -4,13 +4,22 @@ COSC 89.11: Cognitive Computing with Watson
 
 Authors: Ryoya Wakamatsu, Ali Hagen, Zac Gottschall, Teddy Ni
 
-#### Introduction
+#### Introduction: Business Model & Motivation 
 
 
-#### Training Set, Image Source, and Implementation
+#### Knowledge Source
 
 
-#### Summary of Results
+#### Tools and Techniques
+
+
+#### Organization 
+
+
+#### Difficulties Encountered
+
+
+#### Analysis of Results
 
 
 ###### Example 1: 
@@ -28,4 +37,4 @@ Authors: Ryoya Wakamatsu, Ali Hagen, Zac Gottschall, Teddy Ni
 #### Assessment of resulting system's effectiveness
 
 
-#### Points of Improvement
+#### Points of Improvement and Further Work
