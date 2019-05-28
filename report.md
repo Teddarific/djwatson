@@ -31,6 +31,13 @@ In order to create a significant amount of negative data without manually choosi
 
 #### Tools and Techniques
 
+##### Brain.js
+
+<img src="./brain.png">
+
+DJ WATSON utilized Brain.js as the alternative to Watson’s API. Brain.js is a Javascript library for Neural Networks.
+
+
 
 
 #### Organization
@@ -58,7 +65,11 @@ bias, getting all types of music in, how you know it works- what songs sound goo
 
 #### Assessment of resulting system's effectiveness
 
+DJ WATSON worked extremely well when the queried playlist consisted of a wide diversity of music types and genres. Upon inspection of the playlist, the songs were mostly ordered appropriately with songs flowing well from one to the next.
+
+What DJ WATSON did struggle with were playlists that consisted of songs that were similiar to each other. The scores that DJ WATSON assigns to the songs are extremely close and thus, the system fails to order them in an interesting way. It is worth noting, however, that in such a case, the songs already flow well into each other. Another limitation to the system was that there was a hard limit of 50 songs. If a user queried a playlist that consisted of more than 50 songs, DJ WATSON would not be able to generate a reordered list.
+
 
 #### Points of Improvement and Further Work
 
-There are several points of improvement for DJ WATSON. Firstly, we can personalize the model to the user by taking into account user feedback to retrain the model. Secondly, focusing the algorithm to weigh more heavily on the start and end of songs to make transitions more smooth and natural. Thirdly, incorporating an automatic linkage to Spotify so that the user can play directly from the browser. Lastly, we could improve the model further maybe try different Machine Learning APIs.
+There are many points of improvement for DJ WATSON. Firstly, we can personalize the model to the user by taking into account user feedback to retrain the model. Secondly, focusing the algorithm to weigh more heavily on the start and end of songs will allows transitions to be more smooth and natural. Thirdly, incorporating an automatic linkage to Spotify so that the user can play directly from the browser would be a great addition for the user experience. Lastly, we could improve the model further by utilizing different Machine Learning APIs.
