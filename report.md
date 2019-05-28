@@ -18,11 +18,15 @@ DJ WATSON is a paid service and/or feature of a preexisting paid service (such a
 
 **Positive data**
 
-albums
+For the positve data, we used pairs of songs that are next to each other in albums. This made sense to us since albums are put in a specific order so that the songs sound nicely together.
 
 **Negative data**
 
-generator
+In order to create a significant amount of negative data without manually choosing songs, we used a playlist generator from an online application that uses Spotify's API. (http://playlistmachinery.com/) With this, we made playlists that alternate between playlists that have completely opposite types of music to create pairs of songs that would not go well together. For examples, Techno Bunker and Chill as Folk. Here is a view of these playlists in the app:
+
+<img src="./negativeplaylists.png">
+
+**Scraper**
 
 
 #### Tools and Techniques
