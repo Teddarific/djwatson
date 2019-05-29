@@ -45,7 +45,9 @@ DJ WATSON utilized Brain.js as the alternative to Watson’s API. Brain.js is a 
 
 #### Difficulties Encountered
 
-bias, getting all types of music in, how you know it works- what songs sound good and don't
+One initial problem we faced was realizing that Watson's Machine Learning lite plan would not allow us to input more than 3 features and we needed more. We resolved this problem though by finding the separate ML API that would work for all of the features we wanted to include.
+
+With the enormous range of music out there on spotify, there are definitely genres that were left out of our training data. This evidently may have left some bias in our app's results but this was definitely something we were aware and concerned about. As a whole, our group discussed a lot the ways that our app may be biased towards liking certian music pairs, or how that in general is a subjective view. As a result, we were worried that it would be difficult to objectively tell whether DJ Watson was working or not. In the end, we agreed the best we could do was see that the app's results fit our general taste of which songs sound good together.
 
 
 #### Analysis of Results
