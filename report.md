@@ -26,9 +26,6 @@ In order to create a significant amount of negative data without manually choosi
 
 <img src="./negativeplaylists.png">
 
-**Scraper**
-
-
 #### Tools and Techniques
 
 The two main tools we used were Brain.js and Spotify's API.
