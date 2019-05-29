@@ -50,17 +50,26 @@ bias, getting all types of music in, how you know it works- what songs sound goo
 
 #### Analysis of Results
 
+Here is an example we used of DJ Watson ordering the playlist United States Top 50 from Spotify:
 
-###### Example 1:
+<img src="./results_example.png">
+
+In order to analyze the results, we looked at specific pairs of songs that Watson did (or didn't) put together.
+
+###### Correct Positive Example: Suge by DaBaby & Going Bad by Meek Mill feat Drake
+
+- This pair of songs sound great together with a very similar vibe of rap and beat style that flows nicely into each other.
+
+###### Incorrect Example: when the party's over by Billie Eilish & Suge by DaBaby
+- Very surprisingly, this is the first pair in the ordered playlist so DJ Watson calculated a high percentage match for these songs. However, Billie Eilish's song is much more slow of a tempo and a darker vibe so it does not go together well with Suge by DaBaby.
 
 
-###### Example 2:
+###### Correct Negative Example: bury a friend by Billie Eilish & Happier by Marshmello and Bastille
+- This pair was correctly not placed next to each other in the ordered playlist since bury a friend is a very gloomy song with a beat that dramatically contrasts and does not sound nicely with Happier.
 
 
-###### Example 3:
-
-
-###### Example 4:
+###### Missed Positive Example: Happier by Marshmello and Bastille & Eastside by benny blanco, Halsey and Khalid
+- These songs are very similar flow well into each other but DJ Watson unfortunately did not place them next to each other in the playlist. This highlights the way a great pair could be overlooked if its percentage score is only slightly lower than another match.
 
 
 #### Assessment of resulting system's effectiveness
