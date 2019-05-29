@@ -31,17 +31,27 @@ In order to create a significant amount of negative data without manually choosi
 
 #### Tools and Techniques
 
+The two main tools we used were Brain.js and Spotify's API.
+
 ##### Brain.js
 
 <img src="./brain.png">
 
 DJ WATSON utilized Brain.js as the alternative to Watson’s API. Brain.js is a Javascript library for Neural Networks.
+We decided to use Brain.js because of it's versatility, and integration ease. IBM Watson limited us to two features,
+which we strongly believed would limit our models' abilities.
 
+##### Spotify's API
 
-
+We utilized Spotify's API to collect data about songs, specifically the audio features that we used
+to train our model. In addition, we used the API to access playlist data, and hopefully in the future,
+use Spotify API's playback features.
 
 #### Organization
 
+We designed a web client and web server to handle our purposes. Our frontend is built in React, and our backend
+in Node/Express. Essentially, the frontend deals with the user input and display, while the backend
+handles all the data sorting and machine learning.
 
 #### Difficulties Encountered
 
