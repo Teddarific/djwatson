@@ -24,7 +24,7 @@ For the positve data, we used pairs of songs that are next to each other in albu
 
 In order to create a significant amount of negative data without manually choosing songs, we used a playlist generator from an online application that uses Spotify's API. (http://playlistmachinery.com/) With this, we made playlists that alternate between playlists that have completely opposite types of music to create pairs of songs that would not go well together. For examples, Techno Bunker and Chill as Folk. Here is a view of these playlists in the app:
 
-<img src="./negativeplaylists.png" height="200">
+<img src="./negativeplaylists.png">
 
 #### Tools and Techniques
 
@@ -32,7 +32,7 @@ The two main tools we used were Brain.js and Spotify's API.
 
 ##### Brain.js
 
-<img src="./brain.png" height="200">
+<img src="./brain.png" height="150">
 
 DJ WATSON utilized Brain.js as the alternative to Watson’s API. Brain.js is a Javascript library for Neural Networks.
 We decided to use Brain.js because of it's versatility, and integration ease. IBM Watson limited us to two features,
