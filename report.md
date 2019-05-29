@@ -47,6 +47,10 @@ We utilized Spotify's API to collect data about songs, specifically the audio fe
 to train our model. In addition, we used the API to access playlist data, and hopefully in the future,
 use Spotify API's playback features.
 
+We created a scraper that takes in a list of playlists, and generates an excel sheet
+of all the audio features associated with each song from Spotify's API. We used this excel
+sheet to generate our model.
+
 #### Organization
 
 We designed a web client and web server to handle our purposes. Our frontend is built in React, and our backend
