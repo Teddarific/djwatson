@@ -95,3 +95,11 @@ What DJ WATSON did struggle with were playlists that consisted of songs that wer
 #### Points of Improvement and Further Work
 
 There are many points of improvement for DJ WATSON. Firstly, we can personalize the model to the user by taking into account user feedback to retrain the model. Secondly, focusing the algorithm to weigh more heavily on the start and end of songs will allows transitions to be more smooth and natural. Thirdly, incorporating an automatic linkage to Spotify so that the user can play directly from the browser would be a great addition for the user experience. Lastly, we could improve the model further by utilizing different Machine Learning APIs.
+
+#### Will DJ WATSON succeed as a business/service?
+We believe that with the modifcations listed above, our service will be successfull. Communities around us, especially college students, spend significant amounts of time trying to put together optimal playlists for their respective needs. In fact, we were able to book a concert event on campus for DJ Watson to debut at, highlighting the potential of the service DJ WATSON can provide.
+
+#### References
+Spotify Web API: https://developer.spotify.com/documentation/web-api/
+
+Brain.js: https://github.com/BrainJS
