@@ -1,6 +1,8 @@
 # Custom
 negative.txt
 positive.txt
+data/*.xls
+data/training.xls
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -214,3 +216,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+.DS_Store
+
+*.xls
